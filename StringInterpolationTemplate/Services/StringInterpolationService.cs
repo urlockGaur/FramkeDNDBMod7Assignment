@@ -71,5 +71,10 @@ public class StringInterpolationService : IStringInterpolationService
         throw new NotImplementedException();
     }
 
+    public string Number11()
+    {
+        throw new NotImplementedException();
+    }
+
     //2.2019.01.22
 }
