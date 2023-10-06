@@ -76,18 +76,20 @@ public class StringInterpolationService : IStringInterpolationService
         return answer;
     }
 
+    //7.    h:11, m:01, s:27
     public string Number07()
     {
-        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
-        var answer = $"Day {date:dd} of {date:Y}";
+        var date = _date.Now;
+        var answer = $"h:{date:hh}, m:{date:mm}, s:{date:ss}";
         Console.WriteLine(answer);
         return answer;
     }
 
+    //8.    2019.01.22.11.01.27
     public string Number08()
     {
-        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
-        var answer = $"Day {date:dd} of {date:Y}";
+        var date = _date.Now;
+        var answer = $"{date:yyyy}.{date:MM}.{date:dd}.{date:hh}.{date:mm}.{date:ss}";
         Console.WriteLine(answer);
         return answer;
     }
