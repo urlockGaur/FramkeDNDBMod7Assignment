@@ -26,6 +26,7 @@ public class StringInterpolationService : IStringInterpolationService
         return answer;
     }
 
+    //2. 2019.01.22                   have to use _date throughout all methods
     public string Number02()
     {
         throw new NotImplementedException();
