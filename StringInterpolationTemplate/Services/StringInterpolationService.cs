@@ -16,7 +16,7 @@ public class StringInterpolationService : IStringInterpolationService
         _logger.Log(LogLevel.Information, "Executing the StringInterpolationService");
     }
 
-    //1. January 22, 2019 (right aligned in a 40 character field)
+    //  1. January 22, 2019 (right aligned in a 40 character field)
     public string Number01()
     {
         var date = _date.Now.ToString("MMMM dd, yyyy");
@@ -26,56 +26,95 @@ public class StringInterpolationService : IStringInterpolationService
         return answer;
     }
 
-    //2. 2019.01.22                   have to use _date throughout all methods
+    //  2. 2019.01.22                   have to use _date throughout all methods
     public string Number02()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy.MM.dd");
+        var answer = $"{date}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
+    //  3. Day 22 of January, 2019
     public string Number03()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"Day {date:dd} of {date:MMMM}, {date:yyyy}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
+    //  4.Year: 2019, Month: 01, Day: 22
     public string Number04()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"Year: {date:yyyy}, Month: {date:MM}, Day: {date:dd}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
+    //  5.Tuesday (10 spaces total, right aligned)
     public string Number05()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("dddd");
+        var answer = $"{date,10}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
+    //  6.      11:01 PM             Tuesday (10 spaces total for each including the day-of-week, both right-aligned)
     public string Number06()
     {
-        throw new NotImplementedException();
+        var date = _date.Now;
+        var answer = $"{date,10:t}{date,10:dddd}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
+        var answer = $"Day {date:dd} of {date:Y}";
+        Console.WriteLine(answer);
+        return answer;
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
+        var answer = $"Day {date:dd} of {date:Y}";
+        Console.WriteLine(answer);
+        return answer;
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
+        var answer = $"Day {date:dd} of {date:Y}";
+        Console.WriteLine(answer);
+        return answer;
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
+        var answer = $"Day {date:dd} of {date:Y}";
+        Console.WriteLine(answer);
+        return answer;
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
+        var answer = $"Day {date:dd} of {date:Y}";
+        Console.WriteLine(answer);
+        return answer;
     }
 
-    //2.2019.01.22
+    
 }
