@@ -82,6 +82,7 @@ public class StringInterpolationService : IStringInterpolationService
         var date = _date.Now;
         var answer = $"h:{date:hh}, m:{date:mm}, s:{date:ss}";
         Console.WriteLine(answer);
+        
         return answer;
     }
 
@@ -91,30 +92,36 @@ public class StringInterpolationService : IStringInterpolationService
         var date = _date.Now;
         var answer = $"{date:yyyy}.{date:MM}.{date:dd}.{date:hh}.{date:mm}.{date:ss}";
         Console.WriteLine(answer);
+        
         return answer;
     }
 
+    //9.    Output Pi as currency
     public string Number09()
     {
-        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
-        var answer = $"Day {date:dd} of {date:Y}";
+        var pi = Math.PI;
+        var answer = $"{pi:C}";
         Console.WriteLine(answer);
+        
         return answer;
     }
 
+    //10.   Output as right-aligned (10 spaces), number with 3 decimal places
     public string Number10()
     {
-        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
-        var answer = $"Day {date:dd} of {date:Y}";
+        var pi = Math.PI;
+        var answer = $"{pi,10:N3}";
         Console.WriteLine(answer);
+        
         return answer;
     }
 
     public string Number11()
     {
-        var date = _date.Now.ToString($"Day {"dd"} of {"Y"}");
-        var answer = $"Day {date:dd} of {date:Y}";
+        var date = _date.Now.Year.ToString("X4");
+        var answer = $"{date}";
         Console.WriteLine(answer);
+       
         return answer;
     }
 
